@@ -11,7 +11,7 @@ const blogs:Blog [] = [
   {
     title:"Blog 1",
     date:"xx/xx/xx",
-    description:"",
+    description:"Here is a blog about me",
     image:"",
     imageAlt:"",
     slug:"",
