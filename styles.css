@@ -34,7 +34,7 @@ body {
   align-items: center;
   text-align: center;
 
-  background-color: rgb(129, 223, 129);
+  background-color: rgb(50, 56, 133);
   color: var(--cg-white);
   padding: 0px 0px;
 
@@ -55,29 +55,36 @@ body {
 
 .navbar a {
   font-family: Roboto;
-  color: black;
+  color: white;
   font-weight: bold;
   margin: 0 12px;
   text-decoration: none;
   letter-spacing: 2px;
+  transition: 0.15s;
 }
 
 .navbar a:hover {
-  color: rgb(255, 0, 195);
+  opacity: 0.6;
   text-decoration: underline;
 }
 
 .navbar a:active {
-  color: var(--cg-blue);
+  opacity: 0.5;
 }
 
 .logo a {
   font-family: Roboto;
+  transition: 0.15s;
 }
 
 .logo a:hover {
-  font-family: robot;
-  text-decoration: None;
+  font-family: Roboto;
+  opacity: 0.6;
+  text-decoration: Underline;
+}
+
+.logo a:active {
+  opacity: 0.5;
 }
 
 main {
@@ -92,7 +99,7 @@ main {
   display: flex;
   justify-content: center;
   font-size: 40px;
-  font-family: Georgia;
+  font-family: Roboto;
 }
 
 /* CSS for portfolio grid */
@@ -182,6 +189,8 @@ main {
   max-width: 300px;
   border-radius: 3px;
   margin-right: 8px;
+  border-width: 10px;
+  border-color: black;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
 }
 
@@ -202,14 +211,24 @@ main {
   line-height: 1.5;
 }
 
+.index-title {
+  font-size: 35px;
+  font-family: roboto;
+}
+
 /* CSS for resume page */
+
+.resume-title {
+  font-family: roboto;
+  font-size: 35px;
+}
 
 .button {
   background-color: var(--cg-black);
   border: none;
   color: var(--cg-white);
 
-  font-family: monospace;
+  font-family: Roboto;
 
   padding: 5px 7px;
   text-align: center;
@@ -222,7 +241,7 @@ main {
 }
 
 .resume h2 {
-  font-family: Georgia;
+  font-family: Roboto;
 }
 
 /* CSS for contact form */
@@ -254,10 +273,11 @@ form {
 
 .submit-button {
   font-family: Roboto;
-  background-color: rgb(129, 223, 129);
+  background-color: rgb(50, 56, 133);
   border: none;
   padding: 8px 10px 8px 10px;
   transition: 0.15s;
+  color: white;
 }
 
 .submit-button:hover {
@@ -281,4 +301,144 @@ form {
   bottom: 0;
   width: 100%;
   height: 2.5rem;
+}
+
+/* CSS for general blog */
+.blog-title {
+  font-size: 50px;
+}
+
+#blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 50px;
+  justify-items: center;
+  width: 100%;
+}
+
+.blog-post-container {
+  background-color: rgb(50, 56, 133);
+  border-radius: 100px;
+  margin-bottom: 25px;
+  padding: 30px;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.15s;
+  text-decoration: none;
+  color: white;
+}
+
+.blog-post-container:hover {
+  background-color: rgb(73, 59, 173);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#blog-container div {
+  margin: none;
+}
+
+#blog-container h1 {
+  text-align: center;
+}
+
+#blog-container p {
+  margin-top: 0px;
+  width: 350px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+#blog-container img {
+  width: 300px;
+  height: 250px;
+  border-radius: 60px;
+  object-fit: cover;
+}
+
+/*CSS for "Blog Page 1"*/
+
+.blog1-title {
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.blog1-date {
+  font-family: Roboto;
+  font-size: 25px;
+}
+
+.blog1-image {
+  width: 1000px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog1-toc {
+  padding: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 10px;
+}
+
+.toc {
+  width: 960px;
+  font-family: Roboto;
+  font-size: 35px;
+}
+
+.toc-list a {
+  text-decoration: none;
+  line-height: 50px;
+  font-family: roboto;
+  font-size: 30px;
+  color: black;
+  transition: 0.15s;
+}
+
+.toc-list a:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+#intro {
+  scroll-margin-top: 80px;
+}
+
+#value {
+  scroll-margin-top: 80px;
+}
+
+#scope {
+  scroll-margin-top: 80px;
+}
+
+#impact {
+  scroll-margin-top: 80px;
+}
+
+#conclusion {
+  scroll-margin-top: 80px;
+}
+
+.blog1-body {
+  text-align: left;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 35px;
+}
+
+p {
+  font-family: roboto;
+  font-size: 20px;
+  width: 1000px;
 }
