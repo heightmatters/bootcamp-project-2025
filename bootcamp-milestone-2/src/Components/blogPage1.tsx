@@ -1,37 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../styles.css" />
-    <title>Value and Impact</title>
-  </head>
-  <body>
-    <nav class="navbar">
-      <h1 class="logo">
-        <a href="../index.html">Noah Chang</a>
-      </h1>
-      <ul class="nav-list">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../blog.html">Blog</a></li>
-        <li><a href="../portfolio.html">Portfolio</a></li>
-        <li><a href="../resume.html">Resume</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-    </nav>
+import React from "react"
+import style from "./blogPage1.module.css"
+
+export default function BlogPage1() {
+  return(
     <main>
-      <h1 class="blog1-title">Value and Impact</h1>
-      <h3 class="blog1-date">Date: 10/10/25</h2>
+      <h1 className={style.blog1_title}>Value and Impact</h1>
+      <h3 className={style.blog1_date}>Date: 10/10/25</h3>
       <div>
-        <img class="blog1-image" src="../Images/blog1-img.jpg" />
+        <img className={style.blog1_image} src="/blog1-img.jpg" />
       </div>
-      <div class="blog1-toc">
-        <h2 class="toc">Table of Contents</h2>
-        <ul class="toc-list">
+      <div className={style.blog1_toc}>
+        <h2 className={style.toc}>Table of Contents</h2>
+        <ul className={style.toc_list}>
           <li>
             <a href="#intro">Introduction and Background</a>
           </li>
@@ -47,9 +27,9 @@
           </li>
         </ul>
       </div>
-      <div class="blog1-body">
+      <div className={style.blog1_body}>
         <h2 id="intro">Introduction and Background</h2>
-        <p class="intro-p1">
+        <p className={style.intro_p1}>
           Value is a pretty important thing. It’s essentially what our world runs on and 
           oftentimes defines the work we do. If the work has no value, what are we even doing?
           Because of this, there is a common want for value and a common desire to produce value. 
@@ -58,7 +38,7 @@
           Everyone wants to be “that guy” that makes a huge difference in the world. So what are things
           that help to make an impact?
         </p>
-        <p class="intro-p2">
+        <p className={style.intro_p2}>
           Just a little bit of background before I get into how I learned to value my work and how I 
           learned to value myself. My name is Noah Chang, and I am a college freshman at California 
           Polytechnic State University San Luis Obispo studying computer science. I grew up in a city down 
@@ -155,5 +135,5 @@
         </p>
       </div>
     </main>
-  </body>
-</html>
+  )
+}
