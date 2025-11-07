@@ -1,0 +1,14 @@
+.blog_title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.blog_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  width: 100%;
+}

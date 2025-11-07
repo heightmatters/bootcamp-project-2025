@@ -1,0 +1,45 @@
+.project_container {
+  background-color: rgb(50, 56, 133);
+  border-radius: 100px;
+  margin-bottom: 25px;
+  padding: 30px;
+  height: 500px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.15s;
+  text-decoration: none;
+  color: white;
+  flex: 0 0 5em;
+}
+
+.project_container:hover {
+  background-color: rgb(73, 59, 173);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.project_container h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.project_container p {
+  margin-top: 10px;
+  width: 325px;
+  max-height: 100px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 14px;
+}
+
+.project_image {
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  max-height: 250px;
+  border-radius: 60px;
+  object-fit: cover;
+}

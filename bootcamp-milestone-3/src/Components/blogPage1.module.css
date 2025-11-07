@@ -1,0 +1,83 @@
+.blog1_title {
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.blog1_date {
+  font-family: Roboto;
+  font-size: 25px;
+}
+
+.blog1_image {
+  width: 1000px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog1_toc {
+  padding: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.toc {
+  width: 960px;
+  font-family: Roboto;
+  font-size: 35px;
+}
+
+.toc_list a {
+  text-decoration: none;
+  line-height: 50px;
+  font-family: roboto;
+  font-size: 30px;
+  color: black;
+  transition: 0.15s;
+}
+
+.toc_list a:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+#intro {
+  scroll-margin-top: 80px;
+}
+
+#value {
+  scroll-margin-top: 80px;
+}
+
+#scope {
+  scroll-margin-top: 80px;
+}
+
+#impact {
+  scroll-margin-top: 80px;
+}
+
+#conclusion {
+  scroll-margin-top: 80px;
+}
+
+.blog1_body {
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.blog1_body h2 {
+  font-family: Roboto;
+  font-size: 35px;
+}
+
+.blog1_body p {
+  font-family: roboto;
+  font-size: 20px;
+  width: 1000px;
+  margin-bottom: 12px;
+}

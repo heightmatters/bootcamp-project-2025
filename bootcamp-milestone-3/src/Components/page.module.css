@@ -1,0 +1,10 @@
+.portfolio_title {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.portfolio_page {
+  align-items: center;
+  justify-items: center;
+}

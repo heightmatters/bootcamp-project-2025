@@ -1,0 +1,51 @@
+.contact_title {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: Georgia;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  resize: none;
+}
+
+/* Add some spacing to the form */
+.contact_form {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.submit_button {
+  font-family: Roboto;
+  background-color: rgb(50, 56, 133);
+  border: none;
+  padding: 8px 10px 8px 10px;
+  transition: 0.15s;
+  color: white;
+}
+
+.submit_button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.submit_button:active {
+  opacity: 0.5;
+}
