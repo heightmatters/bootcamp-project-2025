@@ -10,7 +10,7 @@ export default function Navbar() {
       <h1 className={style.logo}> Noah Chang</h1>
       <nav className={style.nav_list}>
         <Link href="/">Home</Link>
-        <Link href="/Blog">Blogs</Link>
+        <Link href="/blog">Blogs</Link>
         <Link href="/Projects">Projects</Link>
         <Link href="/Resume">Resume</Link>
         <Link href="/Contact">Contact</Link>

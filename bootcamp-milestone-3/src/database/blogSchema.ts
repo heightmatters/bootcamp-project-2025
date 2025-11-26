@@ -1,6 +1,9 @@
 import mongoose, { Schema } from "mongoose";
 
 // typescript type (can also be an interface)
+
+
+
 type Blog = {
   title: string;
   slug: string;
@@ -20,7 +23,7 @@ const blogSchema = new Schema<Blog>({
   image: { type: String, required: true },
   image_alt: { type: String, required: true },
   content: { type: String, required: true },
-}); 
+});
 
 // defining the collection and model
 const Blog = mongoose.models["blogs"] || mongoose.model("blogs", blogSchema);
