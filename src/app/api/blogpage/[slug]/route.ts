@@ -1,7 +1,7 @@
 // @ts-nocheck
 import { NextRequest, NextResponse } from "next/server";
 import connectDB from "@/database/db";
-import blogPagesSchema from "@/database/blogPageSchema";
+import BlogPage from "@/database/blogPageSchema";
 
 export async function GET(req, context) {
   await connectDB();
@@ -13,7 +13,7 @@ export async function GET(req, context) {
   console.log("🔥 SERVER RECEIVED SLUG:", slug);
 
   try {
-    const page = await blogPagesSchema.findOne({ slug });
+    const page = await BlogPage.findOne({ slug });
     console.log("🔥 MONGO RESULT:", page);
     if (!page) throw new Error("No page returned");
     return NextResponse.json(page);
