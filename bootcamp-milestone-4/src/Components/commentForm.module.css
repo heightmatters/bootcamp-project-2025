@@ -1,0 +1,95 @@
+.commentForm {
+  max-width: 600px;
+  margin: 2rem auto 0 auto;
+  padding: 1rem 1.5rem;
+  background-color: #e0e4f0;
+  border-radius: 8px;
+  border: 1px solid #bfc5d1;
+}
+
+.commentForm h3 {
+  text-align: center;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: #2c2c2c;
+}
+
+/* input box */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+
+  border: 1px solid #b6c1d1;
+  border-radius: 6px;
+
+  background: #ffffff;
+  font-size: 0.95rem;
+
+  margin-bottom: 1rem;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: #3a7bff;
+  box-shadow: 0 0 4px rgba(34, 112, 255, 0.3);
+  outline: none;
+}
+
+/* textarea */
+.textarea {
+  width: 100%;
+  min-height: 140px;
+  padding: 10px 12px;
+
+  border: 1px solid #b6c1d1;
+  border-radius: 6px;
+
+  background: #ffffff;
+  font-size: 0.95rem;
+
+  margin-bottom: 1rem;
+
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  resize: vertical;
+}
+
+.textarea:focus {
+  border-color: #3a7bff;
+  box-shadow: 0 0 4px rgba(34, 112, 255, 0.3);
+  outline: none;
+}
+
+/* button */
+.submitbutton {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+
+  background-color: #343c97;
+  border: none;
+  border-radius: 6px;
+
+  color: white;
+  font-size: 1rem;
+
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.submitbutton:hover {
+  background-color: #2d3585;
+}
+
+.submitbutton:active {
+  transform: scale(0.97);
+  background-color: #262d73;
+}
+
+.commentForm p {
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #2d7d46;
+}

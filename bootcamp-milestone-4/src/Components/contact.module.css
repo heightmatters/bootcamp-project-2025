@@ -1,0 +1,92 @@
+.contact_title {
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+
+/* Form wrapper */
+.contact_form {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px 25px;
+
+  background-color: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Label */
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input fields */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+
+  border: 1px solid #bfc6d4;
+  border-radius: 6px;
+  margin-bottom: 15px;
+
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #323885;
+  box-shadow: 0 0 5px rgba(50, 56, 133, 0.4);
+  outline: none;
+}
+
+/* Textarea */
+.textarea {
+  width: 100%;
+  padding: 12px;
+  min-height: 120px;
+
+  font-size: 16px;
+  border: 1px solid #bfc6d4;
+  border-radius: 6px;
+
+  margin-bottom: 20px;
+  resize: vertical;
+
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Submit Button */
+.submit_button {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+
+  background-color: #323885; /* your dark blue */
+  border: none;
+  border-radius: 6px;
+
+  color: white;
+  font-weight: 500;
+
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.submit_button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.submit_button:active {
+  opacity: 0.7;
+  transform: scale(0.97);
+}

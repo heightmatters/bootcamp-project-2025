@@ -1,0 +1,62 @@
+.blog_title {
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.blog_date {
+  font-family: Roboto;
+  font-size: 25px;
+}
+
+.blog_image {
+  width: 1000px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog_toc {
+  padding: 20px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.toc {
+  width: 960px;
+  font-family: Roboto;
+  font-size: 35px;
+}
+
+.toc_list a {
+  text-decoration: none;
+  line-height: 50px;
+  font-family: roboto;
+  font-size: 30px;
+  color: black;
+  transition: 0.15s;
+}
+
+.toc_list a:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.blog_section {
+  scroll-margin-top: 80px;
+}
+
+.sectionheading {
+  font-family: Roboto;
+  font-size: 35px;
+}
+
+.p {
+  font-family: roboto;
+  font-size: 20px;
+  width: 1000px;
+  margin-bottom: 12px;
+}
