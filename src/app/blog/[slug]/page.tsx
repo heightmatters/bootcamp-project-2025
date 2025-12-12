@@ -9,16 +9,19 @@ type Props = {
 
 async function getBlog(slug: string) {
   try {
-    const res = await fetch(`/api/blogpage/${slug}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SITE_URL}/api/blogpage/${slug}`,
+      {
+        cache: "no-store",
+      }
+    );
 
     if (!res.ok) {
       throw new Error("Failed to fetch blog");
     }
 
     return res.json();
-  } catch (err) {
+  } catch (err: unknown) {
     console.error(`error: ${err}`);
     return null;
   }
