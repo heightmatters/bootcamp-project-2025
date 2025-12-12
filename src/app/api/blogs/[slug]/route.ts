@@ -6,15 +6,18 @@ import blogSchema from "@/database/blogSchema";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug: string } }
+  context: { params: Promise<{ slug: string }> | { slug: string } }
 ) {
   await connectDB();
+
+  // Support both the buggy TS Promise type AND the real runtime object:
+  const params = await Promise.resolve(context.params);
   const { slug } = params;
 
   try {
-    const blog = await blogSchema.findOne({ slug }).orFail();
-    return NextResponse.json(blog);
-  } catch (error) {
-    return NextResponse.json("Blog not found.", { status: 404 });
+    const page = await blogPagesSchema.findOne({ slug }).orFail();
+    return NextResponse.json(page);
+  } catch (err) {
+    return NextResponse.json("Blog page not found.", { status: 404 });
   }
 }

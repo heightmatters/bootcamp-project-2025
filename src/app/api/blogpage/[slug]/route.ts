@@ -5,13 +5,13 @@ import blogPagesSchema from "@/database/blogPageSchema";
 
 export async function GET(
   req: NextRequest,
-  { params }: { params: { slug: string } }
+  context: { params: Promise<{ slug: string }> | { slug: string } }
 ) {
   await connectDB();
 
+  // Support both the buggy TS Promise type AND the real runtime object:
+  const params = await Promise.resolve(context.params);
   const { slug } = params;
-
-  console.log("API RECEIVED SLUG:", slug);
 
   try {
     const page = await blogPagesSchema.findOne({ slug }).orFail();
