@@ -1,4 +1,6 @@
 // app/blog/[slug]/page.tsx
+export const dynamic = "force-dynamic";
+
 import style from "./blogPage.module.css";
 import Comment from "@/components/comment";
 import CommentForm from "@/components/commentForm";
