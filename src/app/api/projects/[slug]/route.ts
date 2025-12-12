@@ -4,16 +4,15 @@ import projectSchema from "@/database/projectSchema";
 
 export async function GET(
   req: NextRequest,
-  context: { params: Promise<{ slug: string }> }
+  { params }: { params: { slug: string } }
 ) {
   await connectDB();
-
-  const { slug } = await context.params;
+  const { slug } = params;
 
   try {
     const project = await projectSchema.findOne({ slug }).orFail();
     return NextResponse.json(project);
-  } catch (err) {
-    return NextResponse.json("Project not found", { status: 404 });
+  } catch (error) {
+    return NextResponse.json("Project not found.", { status: 404 });
   }
 }

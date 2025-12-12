@@ -4,16 +4,15 @@ import blogSchema from "@/database/blogSchema";
 
 export async function GET(
   req: NextRequest,
-  context: { params: Promise<{ slug: string }> }
+  { params }: { params: { slug: string } }
 ) {
   await connectDB();
-
-  const { slug } = await context.params;
+  const { slug } = params;
 
   try {
     const blog = await blogSchema.findOne({ slug }).orFail();
     return NextResponse.json(blog);
-  } catch (err) {
+  } catch (error) {
     return NextResponse.json("Blog not found.", { status: 404 });
   }
 }
