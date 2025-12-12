@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import style from "./page.module.css";
 import connectDB from "@/database/db";
