@@ -4,13 +4,13 @@ import blogPagesSchema from "@/database/blogPageSchema";
 
 export async function GET(
   req: NextRequest,
-  context: { params: { slug: string } }
+  context: { params: Promise<{ slug: string }> }
 ) {
-  console.log("API RECEIVED SLUG:", context.params.slug);
-
   await connectDB();
 
-  const slug = context.params.slug;
+  const { slug } = await context.params;
+
+  console.log("API RECEIVED SLUG:", slug);
 
   try {
     const page = await blogPagesSchema.findOne({ slug }).orFail();

@@ -4,11 +4,11 @@ import blogSchema from "@/database/blogSchema";
 
 export async function GET(
   req: NextRequest,
-  context: { params: { slug: string } }
+  context: { params: Promise<{ slug: string }> }
 ) {
   await connectDB();
 
-  const slug = context.params.slug;
+  const { slug } = await context.params;
 
   try {
     const blog = await blogSchema.findOne({ slug }).orFail();
