@@ -10,7 +10,7 @@ type Props = {
 async function getBlog(slug: string) {
   try {
     // Fetch the blog from the API endpoint
-    const res = await fetch(`http://localhost:3000/api/blogpages/${slug}`, {
+    const res = await fetch(`http://localhost:3000/api/blogpage/${slug}`, {
       cache: "no-store",
     });
 
