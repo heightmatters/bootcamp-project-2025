@@ -3,7 +3,7 @@
 
 import React, { useRef, useEffect, useState } from "react";
 import style from "./projectCarousel.module.css";
-import ProjectPreview from "@/components/projectPreview";
+import ProjectPreview from "./projectPreview";
 import Link from "next/link";
 
 export default function Carousel({ projects }: { projects: any[] }) {
