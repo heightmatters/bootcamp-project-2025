@@ -1,7 +1,7 @@
 // app/blog/[slug]/page.tsx
 import style from "./blogPage.module.css";
-import Comment from "@/Components/comment";
-import CommentForm from "@/Components/commentForm";
+import Comment from "@/components/comment";
+import CommentForm from "@/components/commentForm";
 
 type Props = {
   params: { slug: string };

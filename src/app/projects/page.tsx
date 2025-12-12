@@ -4,7 +4,7 @@ import React from "react";
 import style from "./page.module.css";
 import connectDB from "@/database/db";
 import Project from "@/database/projectSchema";
-import Carousel from "@/Components/projectCarousel";
+import Carousel from "@/components/projectCarousel";
 
 async function getProjects() {
   await connectDB();

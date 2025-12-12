@@ -1,11 +1,11 @@
 export const dynamic = "force-dynamic";
 
 import React from "react";
-import BlogPreview from "@/Components/blogPreview";
+import BlogPreview from "@/components/blogPreview";
 import style from "./page.module.css";
 import connectDB from "../../database/db";
 import Blog from "../../database/blogSchema";
-import CommentForm from "@/Components/commentForm";
+import CommentForm from "@/components/commentForm";
 
 async function getBlogs() {
   await connectDB(); // function from db.ts before

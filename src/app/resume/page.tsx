@@ -1,5 +1,5 @@
 import React from "react";
-import ResumePage from "@/Components/resume";
+import ResumePage from "@/components/resume";
 
 export default function Resume() {
   return (
