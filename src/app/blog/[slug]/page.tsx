@@ -4,17 +4,17 @@ export const dynamic = "force-dynamic";
 import style from "./blogPage.module.css";
 import Comment from "@/components/comment";
 import CommentForm from "@/components/commentForm";
-
+import { headers } from "next/headers";
 type Props = {
   params: { slug: string };
 };
 
 async function getBlog(slug: string) {
   try {
-    // Use Vercel server URL in production, localhost in dev
-    const baseUrl = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000";
+    const headersList = headers();
+    const host = headersList.get("host");
+    const protocol = process.env.NODE_ENV === "production" ? "https" : "http";
+    const baseUrl = `${protocol}://${host}`;
 
     const res = await fetch(`${baseUrl}/api/blogpage/${slug}`, {
       cache: "no-store",
