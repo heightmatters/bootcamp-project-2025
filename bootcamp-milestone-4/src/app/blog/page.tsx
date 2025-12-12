@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import React from "react";
 import BlogPreview from "@/Components/blogPreview";
 import style from "./page.module.css";
@@ -14,7 +16,7 @@ async function getBlogs() {
     // send a response as the blogs as the message
     return blogs;
   } catch (err) {
-    return null;  
+    return null;
   }
 }
 
