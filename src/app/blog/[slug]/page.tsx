@@ -9,9 +9,12 @@ type Props = {
 
 async function getBlog(slug: string) {
   try {
-    const res = await fetch(`/api/blogpage/${slug}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_SITE_URL}/api/blogpage/${slug}`,
+      {
+        cache: "no-store",
+      }
+    );
 
     if (!res.ok) throw new Error("Failed to fetch blog");
 
@@ -21,7 +24,6 @@ async function getBlog(slug: string) {
     return null;
   }
 }
-
 
 export default async function Blog({ params: { slug } }: Props) {
   const blog = await getBlog(slug);
