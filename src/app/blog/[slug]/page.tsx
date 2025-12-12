@@ -9,8 +9,7 @@ type Props = {
 
 async function getBlog(slug: string) {
   try {
-    // Fetch the blog from the API endpoint
-    const res = await fetch(`http://localhost:3000/api/blogpage/${slug}`, {
+    const res = await fetch(`/api/blogpage/${slug}`, {
       cache: "no-store",
     });
 
@@ -19,7 +18,7 @@ async function getBlog(slug: string) {
     }
 
     return res.json();
-  } catch (err: unknown) {
+  } catch (err) {
     console.error(`error: ${err}`);
     return null;
   }
