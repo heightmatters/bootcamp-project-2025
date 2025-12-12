@@ -9,14 +9,14 @@ export async function GET(
 ) {
   await connectDB();
 
-  // Support both the buggy TS Promise type AND the real runtime object:
+  // Normalize params for both TS and runtime behavior
   const params = await Promise.resolve(context.params);
   const { slug } = params;
 
   try {
-    const page = await blogPagesSchema.findOne({ slug }).orFail();
-    return NextResponse.json(page);
+    const project = await projectSchema.findOne({ slug }).orFail();
+    return NextResponse.json(project);
   } catch (err) {
-    return NextResponse.json("Blog page not found.", { status: 404 });
+    return NextResponse.json("Project not found", { status: 404 });
   }
 }
